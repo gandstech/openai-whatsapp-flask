@@ -21,7 +21,6 @@ def sendTextMessage(message) :
         }
     response = requests.post('https://graph.facebook.com/v15.0/103136212562162/messages', headers={
                 'Content-Type': 'application/json',
-                'Authorization': f'Bearer {os.getenv('FACEBOOK_API')}'
+                'Authorization': 'Bearer '+os.getenv('FACEBOOK_API')
             }, json=data)
     return response
-
